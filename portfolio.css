@@ -1,0 +1,257 @@
+*{
+    margin:0;
+    background-color: black;
+    font: 1.1em monospace;
+    color: hsla(120,100%,50%,1);
+    /* hsla(120,100%,20%,1) */
+}
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  body {
+    max-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background: var(--bg-gradient);
+  }
+  
+  #canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .overlay {
+    width: 100%;
+    max-width: 1140px;
+    max-height: 600px;
+    padding: 8rem 6rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0.75rem 2rem 0 hsla(120,100%,20%,1);
+    border-radius: 2rem;
+    border: 1px solid hsla(120,100%,20%,1);
+  }
+  
+  .overlay__inner {
+    max-width: 66rem;
+  }
+  .typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+ 
+  .overlay__title {
+    font-size: 1.875rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 2rem;
+  }
+
+
+
+  .title{
+    font-size: small;
+    max-width: 15rem;
+    max-height: 5rem;
+    display: flex;
+  }
+
+/* contact me start */
+
+
+.column-left{
+  font-size: small;
+}
+
+h5{
+  font-weight: 800;
+}
+
+
+/* contact me end */
+
+
+
+/* portfolio starts */
+
+.intense-work{
+  border: 2px  hsla(120,100%,50%,1);
+  box-shadow: 0 0.75rem 2rem 0 hsla(120,100%,20%,1);
+  max-width: auto;
+  max-height: auto;
+  border-style:solid;
+  margin: 5px;
+}
+.intense-work:hover{
+  border: 2px dotted orange;
+}
+
+.description{
+  font-size: 1rem;
+  padding: 10px;
+  
+}
+
+
+
+
+
+
+/* portfolio ends */
+
+
+
+/* JS typewriter start */
+
+
+
+p {
+    font-size: medium;
+    font-weight: bold;
+    width: 400px;
+    color:  hsla(120,100%,50%,1);
+    max-width: 20rem;
+  }
+
+  
+
+/* JS typewriter ends */
+
+
+  .overlay__btns {
+    width: 100%;
+    max-width: 46rem;
+    display: flex;
+  }
+  
+  .overlay__btn {
+    width: 50%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: solid;
+    border-radius: 0.5rem;
+    transition: transform 150ms ease;
+    margin: 3%;
+    margin-left: 0%;
+  }
+  
+  .overlay__btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    color:  orange;
+    text-decoration: none;
+  }
+  a:hover{
+    color:hsla(120,100%,50%,1);
+  }
+  
+  
+  .overlay__btn-emoji {
+    margin-left: 0.375rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: hsla(120,100%,50%,1);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Not too many browser support this yet but it's good to add! */
+  @media (prefers-contrast: high) {
+    #canvas {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 1140px) {
+    .overlay {
+      padding: 8rem 4rem;
+    }
+  }
+  
+  @media only screen and (max-width: 840px) {
+    body {
+      padding: 1.5rem;
+    }
+  
+    .overlay {
+      padding: 4rem;
+      max-height:675px;
+    }
+  
+    .overlay__title {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .overlay__description {
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .overlay {
+      padding: 1.5rem;
+    }
+  
+    .overlay__btns {
+      flex-wrap: wrap;
+    }
+  
+    .overlay__btn {
+      width: 100%;
+      font-size: 0.75rem;
+      margin-right: 0;
+    }
+  
+    .overlay__btn:first-child {
+      margin-bottom: 1rem;
+    }
+    .form-control{
+      max-width: 100%;
+    }
+  }
+  
